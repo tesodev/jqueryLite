@@ -1,3 +1,3 @@
 # jqueryLite
 
-[docs](https://tesodev.github.io/jqueryLite/)
+[documentation](https://tesodev.github.io/jqueryLite/)
