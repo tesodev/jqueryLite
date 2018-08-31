@@ -1,0 +1,43 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Methods · Jquery</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Tesodev"/><meta name="description" content="* [Css](./css)"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Methods · Jquery"/><meta property="og:type" content="website"/><meta property="og:url" content="https://tesodev.com/index.html"/><meta property="og:description" content="* [Css](./css)"/><meta property="og:image" content="../img/tesodevVector.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://tesodev.com/img/t.jpeg"/><link rel="shortcut icon" href="../img/tesodevVector.png"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="../css/main.css"/>
+        <link rel="stylesheet" href="../css/prism.css"/>
+        <script type="text/javascript"  src="../js/prism.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a target="_self" href="../index.html"><img class="logo" src="../img/tesodevVector.png" alt="Jquery"/><h2 class="headerTitleWithLogo">Jquery</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href=".._menu" target="_self">Docs</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Documentation</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Documentation</h3><ul><li class="navListItem"><a class="navItem" href="./selectors.html">Selectors</a></li><li class="navListItem"><a class="navItem" href="./iterations.html">Iterations</a></li><li class="navListItem navListItemActive"><a class="navItem" href="./methods.html">Methods</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Methods</h1></header><article><div><span><ul>
+<li><a href="./css.html">Css</a></li>
+<li><a href="./data.html">Data</a></li>
+<li><a href="./events.html">Events</a></li>
+<li><a href="./manipulation.html">Element Manipulation</a></li>
+<li><a href="./tree.html">Tree</a></li>
+<li><a href="./animations.html">Animations</a></li>
+<li><a href="./modal.html">Modal</a></li>
+<li><a href="./toast.html">Toast</a></li>
+<li><a href="./sideNav.html">SideNav</a></li>
+<li><a href="./ajax.html">Ajax</a></li>
+<li><a href="./tabs.html">Tabs</a></li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="./iterations.html">← Iterations</a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"></section><a href="https://tesodev.com" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="../img/tesodevVector.png" alt="Facebook Open Source" width="150" height="45"/></a><section class="copyright">Copyright © 2018 TESODEV</section></footer></div></body></html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Tabs · Jquery</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Tesodev"/><meta name="description" content="# .tabs()"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Tabs · Jquery"/><meta property="og:type" content="website"/><meta property="og:url" content="https://tesodev.com/index.html"/><meta property="og:description" content="# .tabs()"/><meta property="og:image" content="../img/tesodevVector.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://tesodev.com/img/t.jpeg"/><link rel="shortcut icon" href="../img/tesodevVector.png"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="../css/main.css"/>
+    <link rel="stylesheet" href="../css/prism.css"/>
+    <script type="text/javascript"  src="../js/prism.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a target="_self" href="../index.html"><img class="logo" src="../img/tesodevVector.png" alt="Jquery"/><h2 class="headerTitleWithLogo">Jquery</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="./docs/docs_menu.html" target="_self">Docs</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Tabs</h1></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="tabs"></a><a href="#tabs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.tabs()</h1>
+<blockquote>
+<p>A modal can be created by using following codes.</p>
+</blockquote>
+<pre><code class="hljs css language-css">    <span class="hljs-selector-class">.header_tabs</span>{
+        <span class="hljs-attribute">position</span>: fixed;
+        <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">top</span>: <span class="hljs-number">0px</span>;
+    }
+    <span class="hljs-selector-class">.tab-content</span> &gt; <span class="hljs-selector-tag">div</span> {
+        <span class="hljs-attribute">display</span>: none;
+        <span class="hljs-attribute">z-index</span>: -<span class="hljs-number">1000</span>;
+    }
+    <span class="hljs-selector-class">.tab-title</span>&gt; <span class="hljs-selector-tag">ul</span> {
+        <span class="hljs-attribute">list-style-type</span>:none;
+        <span class="hljs-attribute">margin</span>:<span class="hljs-number">0</span>;
+        <span class="hljs-attribute">padding</span>:<span class="hljs-number">0</span>;
+        <span class="hljs-attribute">height</span>:<span class="hljs-number">40px</span>;
+        <span class="hljs-attribute">font-family</span>:Arial;
+        <span class="hljs-attribute">font-size</span>:<span class="hljs-number">1.2em</span>;
+        <span class="hljs-attribute">color</span>: <span class="hljs-number">#ffffff</span>;
+    }
+    <span class="hljs-selector-class">.tab-title</span> &gt; <span class="hljs-selector-tag">ul</span> <span class="hljs-selector-tag">li</span> {
+        <span class="hljs-attribute">position</span>: relative;
+        <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#b5c0d1</span>;
+        <span class="hljs-attribute">display</span>:inline-block;
+        <span class="hljs-attribute">float</span>:left;
+        <span class="hljs-attribute">height</span>:<span class="hljs-number">40px</span>;
+        <span class="hljs-attribute">line-height</span>:<span class="hljs-number">40px</span>;
+        <span class="hljs-attribute">min-width</span>: auto;
+        <span class="hljs-attribute">text-align</span>: center;
+    }
+    <span class="hljs-selector-class">.tab-title</span> &gt; <span class="hljs-selector-tag">ul</span> <span class="hljs-selector-tag">li</span><span class="hljs-selector-pseudo">:not(</span><span class="hljs-selector-pseudo">:last-child)</span> {
+        <span class="hljs-attribute">list-style-position</span>: inside;
+        <span class="hljs-attribute">border-right</span>: <span class="hljs-number">1px</span> solid black<span class="hljs-meta">!important</span>;
+    }
+    <span class="hljs-selector-class">.tab-title</span> &gt; <span class="hljs-selector-tag">ul</span> <span class="hljs-selector-tag">li</span> <span class="hljs-selector-tag">a</span> {
+        <span class="hljs-attribute">background-color</span>:<span class="hljs-number">#00447b</span>;
+        <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0.8</span>;
+        <span class="hljs-attribute">height</span>:<span class="hljs-number">40px</span>;
+        <span class="hljs-attribute">line-height</span>:<span class="hljs-number">40px</span>;
+        <span class="hljs-attribute">display</span>:block;
+        <span class="hljs-attribute">color</span>:<span class="hljs-number">#FFF</span>;
+        <span class="hljs-attribute">text-decoration</span>:none;
+        <span class="hljs-attribute">text-transform</span>: uppercase;
+    }
+    <span class="hljs-selector-class">.tab-title-active</span> {
+        <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span><span class="hljs-meta">!important</span>;
+        <span class="hljs-attribute">text-decoration</span>:none;
+        <span class="hljs-attribute">font-weight</span>: bold;
+    }
+    <span class="hljs-selector-class">.tab-title</span> &gt; <span class="hljs-selector-tag">ul</span> <span class="hljs-selector-tag">li</span><span class="hljs-selector-pseudo">:hover</span><span class="hljs-selector-pseudo">:not(.tab-title-active)</span> &gt; <span class="hljs-selector-tag">a</span> {
+        <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0.5</span>;
+        <span class="hljs-attribute">text-decoration</span>:none;
+    }
+</code></pre>
+<pre><code class="hljs css language-html">    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tab tab-title"</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"mainTabs"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tab-header"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#tab1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tab-title-active"</span>&gt;</span>Tab 1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tab-header"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#tab2"</span>&gt;</span>Tab 2<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tab tab-content"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"mainTabs"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"tab1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"active tab-data"</span>&gt;</span>
+            ...
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"tab2"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tab-data"</span>&gt;</span>
+            ...
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<p><code>You must initialize tabs component and fired callback function when index changed.</code></p>
+<pre><code class="hljs css language-js">    $.tabs(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">el, index</span>) </span>{ });
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"></section><a href="https://tesodev.com" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="../img/tesodevVector.png" alt="Facebook Open Source" width="150" height="45"/></a><section class="copyright">Copyright © 2018 TESODEV</section></footer></div></body></html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AUTHENTICATION</title>
+    <link href="static/css/dataTable.css" rel="stylesheet">
+    <link href="static/css/Grid.css" rel="stylesheet">
+    <link href="static/css/Tesodev.css" rel="stylesheet">
+    <link href="static/css/Toast.css" rel="stylesheet">
+    <link href="static/css/modal.css" rel="stylesheet">
+    <link href="static/css/sideNav.css" rel="stylesheet">
+    <link href="static/css/tabs.css" rel="stylesheet">
+</head>
+<body>
+<div class="modal" id="signUpModal">
+    <div class="modal-wrapper">
+        <div class="modal-header">
+            <h4 >Sign Up Form</h4>
+        </div>
+        <hr>
+        <div class="modal-content">
+            <form id="signUpForm" action="#">
+                <div class="row">
+                    <input type="email" name="email" class="tesodev-control" placeholder=" " required autofocus>
+                    <span class="tesodev-floating-label">Email</span>
+                </div>
+                <div class="row">
+                    <input type="password" name="password" class="tesodev-control" placeholder=" " required>
+                    <span class="tesodev-floating-label">Password</span>
+                </div>
+            </form>
+        </div>
+        <hr>
+        <div class="modal-footer">
+            <input type="submit" class="tesodev-button" form="signUpForm" style="background-color: green" value="Register">
+        </div>
+    </div>
+</div>
+<div class="modal" id="logInModal">
+    <div class="modal-wrapper">
+        <div class="modal-header">
+            <h2>Log In Form</h2>
+        </div>
+        <hr>
+        <div class="modal-content">
+            <form id="logInForm" action="#">
+                <div class="row">
+                    <input type="email" name="email" class="tesodev-control" placeholder=" " required autofocus>
+                    <span class="tesodev-floating-label">Email</span>
+                </div>
+                <div class="row">
+                    <input type="password" name="password" class="tesodev-control" placeholder=" " required>
+                    <span class="tesodev-floating-label">Password</span>
+                </div>
+            </form>
+        </div>
+        <hr>
+        <div class="modal-footer">
+            <input type="submit" class="tesodev-button" form="logInForm" style="background-color: green" value="Log In">
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-9">
+            <div class="tab tab-title" target="tab1">
+                <ul>
+                    <li class="tab-header col-3"><a href="#main" class="tab-title-active">Main</a></li>
+                    <li class="tab-header col-3"><a href="#tab2">Tab 2</a></li>
+                </ul>
+            </div>
+            <div class="tab tab-content" id="tab1">
+                <div id="main" class="active tab-data">
+                    <div id="testTable"></div>
+                </div>
+                <div id="tab2" class="tab-data">
+                    <div id="testTable1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="col-6 right 1">
+                <button class="tesodev-button" id="logInBtn" style="background-color: green" type="button">Log In</button>
+                <div id="loggedUser" class="hide"></div>
+            </div>
+            <div class="col-6 right 2">
+                <button class="tesodev-button" id="signUpBtn" style="background-color: red" type="button">Sign Up</button>
+                <button class="tesodev-button hide" id="logOutBtn" style="background-color: red" type="button">Log Out</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="side-nav side-nav1" name="sidenav-left" tabindex="0" style="display: none">
+    <h2>Left SideNav</h2><div class="divider" style="height: 4px"></div>
+    <input id="left_collapse_1" class="toggle" type="checkbox">
+    <label for="left_collapse_1" class="lbl-toggle">Collapse 1</label>
+    <div class="collapsible-content left_collapse_1">
+        <div class="content-inner">
+            <ul>
+                <li>
+                    <a href="#!">item 1</a>
+                </li>
+                <li>
+                    <a href="#!">item 2</a>
+                </li>
+            </ul>
+        </div>
+    </div><div class="divider" style="height: 3px"></div>
+    <input id="left_collapse_2" class="toggle" type="checkbox">
+    <label for="left_collapse_2" class="lbl-toggle">Collapse 2</label>
+    <div class="collapsible-content left_collapse_2">
+        <div class="content-inner">
+            <ul>
+                <li>
+                    <a href="#!">item 1</a>
+                </li>
+                <li>
+                    <a href="#!">item 2</a>
+                </li>
+            </ul>
+        </div>
+    </div><div class="divider" style="height: 3px"></div>
+</div>
+<div class="side-nav side-nav2" tabindex="0" style="display: none">
+    <h2>Right SideNav</h2><div class="divider" style="height: 4px"></div>
+    <input id="right_collapse_1" class="toggle" type="checkbox">
+    <label for="right_collapse_1" class="lbl-toggle">Collapse 1</label>
+    <div class="collapsible-content right_collapse_1">
+        <div class="content-inner">
+            <ul>
+                <li>
+                    <a href="#!">item 1</a>
+                </li>
+                <li>
+                    <a href="#!">item 2</a>
+                </li>
+            </ul>
+        </div>
+    </div><div class="divider" style="height: 3px"></div>
+    <input id="right_collapse_2" class="toggle" type="checkbox">
+    <label for="right_collapse_2" class="lbl-toggle">Collapse 2</label>
+    <div class="collapsible-content right_collapse_2">
+        <div class="content-inner">
+            <ul>
+                <li>
+                    <a href="#!">item 1</a>
+                </li>
+                <li>
+                    <a href="#!">item 2</a>
+                </li>
+            </ul>
+        </div>
+    </div><div class="divider" style="height: 3px"></div>
+</div>
+<div class="fab buttons">
+        <span class="fab-action-button">
+            <img class="fab-action-button-icon fab-icon" src="/static/img/icons/add.svg" style="width: 60px">
+        </span>
+    <ul class="fab-buttons">
+        <li class="fab-button-item">
+            <a href="#" class="fab-button-link" data-tooltip="Left sidenav">
+                <img class="fab-action-button-icon left_sidenav" src="/static/img/icons/option.svg" style="width: 48px">
+            </a>
+        </li>
+        <li class="fab-button-item">
+            <a href="#" class="fab-button-link" data-tooltip="Right sidenav">
+                <img class="fab-action-button-icon right_sidenav" src="/static/img/icons/option.svg" style="width: 48px">
+            </a>
+        </li>
+    </ul>
+</div>
+<script src="static/js/DataTable.js"></script>
+<script src="static/js/Toast.js"></script>
+<script src="static/js/DragTable.js"></script>
+<script src="static/js/Jquery.js"></script>
+<script src="static/js/script.js"></script>
+</body>
+</html>
